@@ -1,0 +1,681 @@
+// **** レスポンシブ ******
+@mixin sp-screen {
+  @media screen and (max-width:428px) {
+    @content;
+  }
+}
+
+// *****（ 全体 ）**************
+* {
+  font-family: 'Inria Sans', sans-serif;
+}
+
+H2 {
+  background-image: url(../../img/undeline.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Inria Serif', serif;
+  width: 176px;
+  height: 74px;
+  padding: 18px 0;
+  margin: 63px auto 0px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
+
+// *******************
+
+.kv {
+  background-image: url(../../img/header.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 600px;
+
+  @include sp-screen {
+    background-image: url(../../img/header_SP.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  .header-conteinar {
+    background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+
+    @include sp-screen {
+      display: block;
+      height: 190px;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: 32px;
+      margin-left: 160px;
+
+      @include sp-screen {
+        margin: 0px;
+        text-align: center;
+        padding: 13px;
+
+        &::before {
+          content: "";
+          background-color: black;
+          position: absolute;
+          height: 2px;
+          left: 3%;
+          top: 70px;
+          bottom: -15px;
+          width: 95%;
+          display: inline-block;
+
+        }
+      }
+    }
+
+    .headerlink {
+      font-weight: 400;
+      font-size: 20px;
+      margin-right: 160px;
+
+      @include sp-screen {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px 40px;
+      }
+
+      a {
+        margin: 0 32px;
+
+        @include sp-screen {
+          margin: 10px 50px;
+        }
+      }
+    }
+  }
+
+  .header-text {
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    margin: 300px 0px 0px 160px;
+
+    @include sp-screen {
+      margin: 200px 100px 0px 0px;
+      padding: 20px;
+    }
+  }
+
+  // header終わり
+}
+
+// main開始
+.plofil {
+  &-conteinar {
+    width: 730px;
+    margin: 58px auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include sp-screen {
+      display: block;
+      width: auto;
+      margin: 58px 68px;
+    }
+
+    .plofil-box1 {
+      img {
+        width: 256px;
+        height: 256px;
+      }
+    }
+
+
+    .plofil-box2 {
+      text-align: center;
+
+      i {
+        font-size: 63px;
+        margin-left: 28px;
+
+        @include sp-screen {
+          font-size: 40px;
+        }
+      }
+    }
+
+    .plofil-box3 {
+      width: 434px;
+
+      @include sp-screen {
+        width: auto;
+      }
+
+      h3 {
+        margin-bottom: 23px;
+      }
+    }
+  }
+
+  // plofil 終了
+}
+
+// ======== Works ==============
+.works {
+  justify-content: center;
+
+  &-conteinar {
+
+    .works-outer {
+      width: 992px;
+      margin: 44px auto 0px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      @include sp-screen {
+        display: block;
+        width: auto;
+        margin: 44px 65px;
+      }
+
+      .box {
+        cursor: pointer;
+
+        @include sp-screen {
+          width: auto;
+        }
+
+        img {
+          width: 447px;
+          height: 369px;
+
+          @include sp-screen {
+            width: auto;
+            height: auto;
+          }
+        }
+
+        p {
+          margin: 19px 0 79px;
+        }
+      }
+    }
+  }
+
+  // Works終了
+}
+
+//========= Works-modal ========
+.modal{
+  background-color: white;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  // max-width: 1000px;
+  // width: 100%;
+  // height: auto;
+  // margin: 0 auto;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  box-sizing: border-box;
+
+  &.open {
+    display: block;
+  }
+
+  &-body {
+    // height: 1377px;  /0.6
+    // width: 1440px;  /0.6
+    height: 770px;
+    width: 864px;
+    @include sp-screen {
+      width: 350px;  //0.6
+      // box-shadow: 1px 3px 10px 5px grey;
+    }
+
+
+    .modal-header {
+      background-image: url(../../img/modal_header.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      align-items: center;
+      // margin-bottom: 73px;  /0.6
+      margin-bottom: 43px;
+
+      @include sp-screen {
+        background-image: url(../../img/header_SP.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 23px;
+      }
+
+      h3 {
+        font-weight: 400;
+        font-size: 32px;
+        @include sp-screen {
+          margin: 0 auto;
+
+          }
+      }
+
+      &-container {
+        background-color: rgba(255, 255, 255, 0.25);
+        // height: 70px; /0.6
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        font-weight: 400;
+        font-size: 20px;
+
+        @include sp-screen {
+        height: 150px;
+        display: grid;
+        }
+        
+
+        .headerlink {
+          display: flex;
+          justify-content: space-between;
+
+          @include sp-screen {
+            flex-wrap: wrap;
+            }
+
+          a {
+            margin: 0 32px;
+            @include sp-screen {
+              margin: 0 25px;
+              }
+          }
+        }
+        .modal-close{
+          cursor: pointer;
+          background: transparent;
+          border-color: transparent;
+          padding: 0;
+          margin: 0;
+          width: 45px;
+          display: block;
+          height: 45px;
+
+          @include sp-screen {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            }
+
+          span {
+            position: relative;
+            width: 100%;
+            left: -6%;
+            height: 3px;
+            background: black;
+            display: block;
+          }
+
+          span:nth-child(1) {
+            transform: rotate(45deg);
+          }
+          
+          span:nth-child(2) {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+
+    .modal-works {
+      display: flex;
+      justify-content: center;
+      margin-top: 90px;
+      font-family: 'Inria Serif', serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: white;
+
+      @include sp-screen {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &-skill {
+    // width: 928px; /0.6
+    width: 556px;
+    margin: 0 auto;
+
+    @include sp-screen {
+      width: 300px;  //0.6
+    }
+
+    img {
+      // height: 531px; /0.6
+      // width: 928px; /0.6
+      height: 318px;
+      width: 556px;
+      @include sp-screen {
+        width: 333px; //0.6
+        height: 190px;  //0.6
+      }
+
+    }
+
+    .modal-workname {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .modal-text {
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+
+}
+
+// **** modal-button ****
+.modal-button-unity {
+  display: flex;
+  justify-content: space-between;
+
+  .modal-button-conteinar {
+    width: 120px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    border: solid;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    .fa-sharp {
+      width: 17px;
+    }
+
+    .modal-prev {
+      margin-left: 27px;
+    }
+
+    .modal-next {
+      margin-right: 27px;
+    }
+
+    .modal-button2 {
+      width: 122px;
+      height: 40px;
+      background-color: rgba(210, 199, 189, 1);
+      position: absolute;
+      z-index: -1;
+      top: 9px;
+      left: 7px;
+    }
+  }
+}
+
+
+.Skills {
+
+  h4 {
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 7px;
+    padding: 10px 10px;
+    text-align: start;
+  }
+
+
+  &-conteinar {
+    width: 800px;
+    margin: 77px auto 128px;
+
+    @include sp-screen {
+      width: auto;
+      margin: 35px auto;
+      display: table;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 57px;
+
+      @include sp-screen {
+        display: block;
+      }
+
+      .box1 {
+        width: 199px;
+        height: 300px;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 0 15px 2px rgba(182, 182, 182, 1);
+
+        @include sp-screen {
+          margin-bottom: 36px;
+        }
+
+        img {
+          width: 79px;
+          height: 120px;
+        }
+      }
+
+      .box2 {
+        width: 199px;
+        height: 300px;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 0 15px 2px rgba(182, 182, 182, 1);
+
+        @include sp-screen {
+          margin-bottom: 36px;
+        }
+
+        img {
+          width: 79px;
+          height: 120px;
+        }
+      }
+
+      .box3 {
+        width: 199px;
+        height: 300px;
+        text-align: center;
+        padding: 15px 0;
+        box-shadow: 0 0 15px 2px rgba(182, 182, 182, 1);
+      }
+
+    }
+
+    .under {
+      display: flex;
+      justify-content: space-around;
+
+      @include sp-screen {
+        display: block;
+      }
+
+      // jQuery
+      .box4 {
+        width: 199px;
+        height: 291px;
+        text-align: center;
+        padding: 54px 0 34px;
+        box-shadow: 0 0 15px 2px rgba(182, 182, 182, 1);
+
+        @include sp-screen {
+          margin-bottom: 36px;
+        }
+      }
+
+      .box5 {
+        width: 199px;
+        height: 300px;
+        text-align: center;
+        padding: 15px 0;
+        box-shadow: 0 0 15px 2px rgba(182, 182, 182, 1);
+      }
+    }
+
+  }
+
+  // Skills終了
+}
+
+.contact {
+  width: 545px;
+  margin: 0 auto;
+
+  @include sp-screen {
+    width: auto;
+    margin: 0 32px;
+  }
+
+  &-conteinar {
+
+    p {
+      margin: 77px auto 34px;
+      text-align: center;
+
+      @include sp-screen {
+        width: 100%;
+        margin: 23px 0px;
+        font-size: 11px;
+        font-weight: 400;
+      }
+    }
+
+    .name {
+      font-weight: 400;
+      font-size: 19px;
+    }
+
+    .requir {
+      width: 56px;
+      height: 19px;
+      margin-left: 25px;
+      font-weight: 400;
+      font-size: 16px;
+      background-color: rgba(255, 0, 0, 0.7);
+      color: white;
+    }
+
+    input {
+      width: 544px;
+      height: 30px;
+      border: solid 1px black;
+      margin-bottom: 37px;
+
+      @include sp-screen {
+        width: 100%;
+      }
+    }
+
+    #inquiry {
+      border: solid 1px black;
+
+      @include sp-screen {
+        width: 100%;
+      }
+    }
+  }
+
+  // contact終了
+}
+
+.footerkv {
+  background-image: url(../../img/footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 132px;
+  position: relative;
+
+  @include sp-screen {
+    background-image: url(../../img/footer_sp.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80px;
+  }
+
+
+  .footerlink {
+    background-color: rgba(255, 255, 255, 0.25);
+    height: 45px;
+    width: 100%;
+    text-align: end;
+    position: absolute;
+    top: 100px;
+
+    @include sp-screen {
+      top: 50px;
+      height: auto;
+      text-align: center;
+    }
+
+
+    a {
+      font-weight: 400;
+      font-size: 20px;
+      margin: 0 20px;
+
+      @include sp-screen {
+        font-size: 16px;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  // footer終了
+}
+
+// 共有部分(button)
+.button-conteinar {
+  width: 233px;
+  height: 58px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  border: solid;
+  background-color: transparent;
+  margin: 73px auto 130px;
+  display: block;
+  position: relative;
+
+  @include sp-screen {
+    margin: 35px auto;
+  }
+
+  .button2 {
+    width: 233px;
+    height: 58px;
+    background-color: rgba(210, 199, 189, 1);
+    position: absolute;
+    z-index: -1;
+    top: 9px;
+    left: 7px;
+  }
+}

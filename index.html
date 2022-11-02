@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/1feb35784a.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/slick.css">
+  <link rel="stylesheet" href="./assets/css/slick-theme.css">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <header class="kv">
+    <div class="header-conteinar">
+      <h1>Programing Nurse</h1>
+      <div class="headerlink">
+        <a href="#plofil">Plofil</a>
+        <a href="#works">Works</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="header-text"><span>自分のアイデアをカタチにしたい。</span><br>
+      そのために、プログラミングを勉強しています！</p>
+  </header>
+
+  <main>
+    <div id="plofil"></div>
+    <section class="plofil">
+      <h2>plofil</h2>
+      <div class="plofil-conteinar">
+        <div>
+          <div class="plofil-box1">
+            <img src=".//img/myphoto.jpeg" alt="Myphoto">
+          </div>
+          <div class="plofil-box2">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+          </div>
+        </div>
+        <div class="plofil-box3">
+          <h3>金城恵奈（キンジョウエナ）</h3>
+          <p>生まれ：京都</p>
+          <p>住んでいる所：沖縄県</p>
+          <p>趣味：旅行、ダイビング、シュノーケリング、釣り</p>
+          <p>好きなことば：「探究心」「何事も楽しむ」</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="works"></div>
+    <section class="works">
+      <h2>Works</h2>
+      <div class="works-conteinar">
+        <div class="works-outer">
+          <!-- マンゴー -->
+          <div href="" class="box" id="js-open01" data-target="modal01">
+            <img src="./img/mango.png" alt="mango">
+            <p>マンゴー</p>
+          </div>
+          <!-- <div class="overlay" id="js-overlay"></div> -->
+          <div id="modal01" class="modal js-modal01">
+            <div class="modal-body">
+              <div class="modal-header">
+                <div class="modal-header-container">
+                  <h3>マンゴー</h3>
+                  <div class="headerlink">
+                    <a href="#">Plofil</a>
+                    <a href="#">Works</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Contact</a>
+                  </div>
+                  <div class="modal-close__wrap">
+                    <button class="modal-close" id="js-close01">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+                <p class="modal-works">works</p>
+              </div>
+              <div class="modal-skill">
+                <img src="./img/mango.png" alt="マンゴーの画像">
+                <p class="modal-workname">マンゴー</p>
+                <p class="modal-text">HTML/CSS/</p>
+                <p class="modal-text">授業の課題で作成しました。作成した時期が夏だったのと、好きな食べ物だったのでマンゴー一色で作成しました。</p>
+                <div class="modal-button-unity" data-nowmodal="01">
+                  <button class="modal-button-conteinar" data-page="none">
+                    <i class="fa-sharp fa-solid fa-less-than"></i>
+                    <p class="modal-prev">prev</p>
+                    <div class="modal-button2"></div>
+                  </button>
+                  <button class="modal-button-conteinar" data-page="js-modal02">
+                    <p class="modal-next">next</p>
+                    <i class="fa-sharp fa-solid fa-greater-than"></i>
+                    <div class="modal-button2"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TODOリスト -->
+          <div class="box" id="js-open02" data-target="modal02">
+            <img src="./img/todo.png" alt="todoリスト">
+            <p>TODOリスト</p>
+          </div>
+          <!-- <div class="overlay" id="js-overlay"></div> -->
+          <div id="modal02" class="modal js-modal02">
+            <div class="modal-body">
+              <div class="modal-header">
+                <div class="modal-header-container">
+                  <h3>TODOリスト</h3>
+                  <div class="headerlink">
+                    <a href="#">Plofil</a>
+                    <a href="#">Works</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Contact</a>
+                  </div>
+                  <div class="modal-close__wrap">
+                    <button class="modal-close" id="js-close02">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+                <p class="modal-works">works</p>
+              </div>
+              <div class="modal-skill">
+                <img src="./img/todo.png" alt="TODOリスト">
+                <p class="modal-workname">TODOリスト</p>
+                <p class="modal-text">HTML/CSS/Javascript</p>
+                <p class="modal-text">TODOリストを達成した回数でポケモンが進化していきます。Javascriptの設定が難しかったです。</p>
+                <div class="modal-button-unity" data-nowmodal="02">
+                  <button class="modal-button-conteinar" data-page="js-modal01">
+                    <i class="fa-sharp fa-solid fa-less-than"></i>
+                    <p class="modal-prev">prev</p>
+                    <div class="modal-button2"></div>
+                  </button>
+                  <button class="modal-button-conteinar" data-page="js-modal03">
+                    <p class="modal-next">next</p>
+                    <i class="fa-sharp fa-solid fa-greater-than"></i>
+                    <div class="modal-button2"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 熱中症 -->
+          <div class="box" id="js-open03" data-target="modal03">
+            <img src="./img/heatstoroke.png" alt="熱中症">
+            <p>熱中症</p>
+          </div>
+          <!-- <div class="overlay" id="js-overlay"></div> -->
+          <div id="modal03" class="modal js-modal03">
+            <div class="modal-body">
+              <div class="modal-header">
+                <div class="modal-header-container">
+                  <h3>熱中症</h3>
+                  <div class="headerlink">
+                    <a href="#">Plofil</a>
+                    <a href="#">Works</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Contact</a>
+                  </div>
+                  <div class="modal-close__wrap">
+                    <button class="modal-close" id="js-close03">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+                <p class="modal-works">works</p>
+              </div>
+              <div class="modal-skill">
+                <img src="./img/heatstoroke.png" alt="熱中症の画像">
+                <p class="modal-workname">酸っぱいマン</p>
+                <p class="modal-text">HTML/CSS/Scss/Jquery/プラグイン（pagepiling/Bootstrap/Slick）/PW</p>
+                <p class="modal-text">授業の課題でペアを取り組みました。習ったスキルを使うことを意識して作成した作品です。</p>
+                <div class="modal-button-unity" data-nowmodal="03">
+                  <button class="modal-button-conteinar" data-page="js-modal02">
+                    <i class="fa-sharp fa-solid fa-less-than"></i>
+                    <p class="modal-prev">prev</p>
+                    <div class="modal-button2"></div>
+                  </button>
+                  <button class="modal-button-conteinar" data-page="js-modal04">
+                    <p class="modal-next">next</p>
+                    <i class="fa-sharp fa-solid fa-greater-than"></i>
+                    <div class="modal-button2"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WordPrees -->
+          <div class="box" id="js-open04" data-target="modal04">
+            <img src="./img/screenshot.png" alt="WordPrees">
+            <p>WordPrees</p>
+          </div>
+          <!-- <div class="overlay" id="js-overlay"></div> -->
+          <div id="modal04" class="modal js-modal04">
+            <div class="modal-body">
+              <div class="modal-header">
+                <div class="modal-header-container">
+                  <h3>WordPrees</h3>
+                  <div class="headerlink">
+                    <a href="#">Plofil</a>
+                    <a href="#">Works</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Contact</a>
+                  </div>
+                  <div class="modal-close__wrap">
+                    <button class="modal-close" id="js-close04">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+                <p class="modal-works">works</p>
+              </div>
+              <div class="modal-skill">
+                <img src="./img/screenshot.png" alt="wordpressの画像">
+                <p class="modal-workname">wordpress/OJT課題</p>
+                <p class="modal-text">HTML/CSS/jquery/WordPress</p>
+                <p class="modal-text"><br><br><br></p>
+                <div class="modal-button-unity" data-nowmodal="04">
+                  <button class="modal-button-conteinar" data-page="js-modal03">
+                    <i class="fa-sharp fa-solid fa-less-than"></i>
+                    <p class="modal-prev">prev</p>
+                    <div class="modal-button2"></div>
+                  </button>
+                  <button class="modal-button-conteinar" data-page="none">
+                    <p class="modal-next">next</p>
+                    <i class="fa-sharp fa-solid fa-greater-than"></i>
+                    <div class="modal-button2"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="button-conteinar">more
+          <div class="button2"></div>
+    </section>
+
+    <div id="skills"></div>
+    <section class="Skills">
+      <h2>Skills</h2>
+      <div class="Skills-conteinar">
+        <div class="top">
+          <div class="box1">
+            <img src="./img/HTML_logo.png" alt="HTML">
+            <h4>HTML</h4>
+            <p>授業や講師からの課題、グループ制作、自主制作で合計9つのWebサイトをコーディングしました。
+              レスポンシブもコツがつかめてきたところです。
+            </p>
+          </div>
+          <div class="box2">
+            <img src="./img/CSS_logo.png" alt="CSS">
+            <h4>CSS</h4>
+            <p>授業や講師からの課題、グループ制作、自主制作で合計9つのWebサイトをコーディングしました。
+              Scssを使ってコードを書くのが好きです。
+            </p>
+          </div>
+          <div class="box3">
+            <img src="./img/Javascript_logo.png" alt="Javascript">
+            <h4>Javascript</h4>
+            <p>授業の課題で「TODOリスト」を制作しました。苦手意識が一番ありますが、理解できるよう勉強は継続しています。
+            </p>
+          </div>
+        </div>
+
+        <div class="under">
+          <div class="box4">
+            <img src="./img/jQuery_logo.png" alt="jQuery">
+            <h4>jQuery</h4>
+            <p>WEBサイトに簡単な動きをつけるたマウスオーバーやスライダー、フェードイン、フェードアウトなどを習いました。
+            </p>
+          </div>
+          <div class="box5">
+            <img src="./img/Vector.png" alt="wordpress">
+            <h4>WordPress</h4>
+            <p>授業の課題で1つ制作しました。案件も頂いたことでwp構築、プラグイン使用方法などができるようになりました。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="contact"></div>
+    <section class="contact">
+      <h2>Contact</h2>
+      <div class="contact-conteinar">
+        <p>制作の依頼・ご相談などご気軽にお問合せ下さい</p>
+
+        <div class="contact-name-box">
+          <label class="name" for="name">お名前</label>
+          <label class="requir" for="Required"> 必須</label>
+        </div>
+        <input type="text" name="name" value="">
+
+        <div class="contact-email-box">
+          <label class="name" for="name">E-mail</label>
+          <label class="requir" for="Required"> 必須</label>
+        </div>
+        <input type="email" name="name" value="">
+
+        <div class="inquirymain">
+          <label class="name" for="inquiry">お問合せ内容</label>
+          <label class="requir" for="Required"> 必須</label>
+        </div>
+        <textarea name="inquiry" id="inquiry" cols="61" rows="10"></textarea>
+      </div>
+    </section>
+    <button class="button-conteinar">send
+      <div class="button2"></div>
+    </button>
+  </main>
+
+  <footer class="footerkv">
+    <!-- <div class="footer-conteinar"> -->
+    <div class="footerlink">
+      <a href="#plofil">Plofil</a>
+      <a href="#works">Works</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <!-- </div> -->
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/js/slick.js"></script>
+  <!-- <script src="./assets/js/paginathing.min.js"></script> -->
+  <script src="./assets/js/jquery.js"></script>
+
+</body>
+
+</html>
