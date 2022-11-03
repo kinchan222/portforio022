@@ -369,6 +369,7 @@ H2 {
 .modal-skill img {
   height: 318px;
   width: 556px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 428px) {
