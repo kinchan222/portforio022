@@ -225,6 +225,7 @@ H2 {
 .modal-body {
   height: 770px;
   width: 864px;
+  box-shadow: 1px 3px 10px 5px grey;
 }
 
 @media screen and (max-width: 428px) {
